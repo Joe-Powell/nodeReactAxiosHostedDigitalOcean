@@ -1,0 +1,37 @@
+What Is CI/CD? = Continuous integration/continuous delivery. processes that help software development teams deliver
+ code changes more frequently and reliably. CI/CD is part of DevOps, which helps shorten the software development lifecycle.
+
+ 1 make file app.js
+ 2 npm init -y
+ 2 npm i express
+ 3 express boiler plate in app.js
+ 4 make express route with res.send('name')
+ 5 install front-end npx create-react-app frontend
+ 6 remove git from the react app because it come automatically, cd into the react app then type: rm -rf .git, use gitbash not the built in terminal.
+ 7 cd back into global folder and type: git init, we want the whole folder to be git
+ 8 cd into frontend and tyype: npm i axios ,with axios we will make calls to the back-end
+ 9 go into App.js, the one inside src of frontend, and delete everything inside the return as well as the logo import.
+ 10 type: import axios from 'axios'; at top of src App.js
+ 11  import React, { useState, useEffect } from 'react';
+ 12 const [userName, setUsername] = useState('') and  useEffect(() => {     }, []) runs once when page loads
+ 13 make proxy inside package.json for the frontend, type after browserslist: ,"proxy":"http://localhost:5000"
+ 14 create a useEffect and make a function to fire inside of it called getNames(), make async await for that call
+ 15 getNames() will have a response of the axios call asynchronously 
+
+     useEffect(() => {
+        getNames();
+      }, [])
+
+  const getNames = async() => {
+    const response = await axios.get('/names')
+     console.log(response)
+  }
+
+ 16 make sure your cd into the front-end and type: npm start to start the react app.
+ 17 innitialize the back-end, open another terminal, cd go to root folder of the project, make sure the package.json
+   of the server has a "start": "node app.js" , and then npm start. by now you will see in the console.log the response data
+ 18 go inside App.js of react and in the function getNames make a setUsername(response.data) then in the return put <> <h3>My name is:{userName}</h3> </>
+
+
+
+
