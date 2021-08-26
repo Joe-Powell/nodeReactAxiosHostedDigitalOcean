@@ -17,7 +17,7 @@ What Is CI/CD? = Continuous integration/continuous delivery. processes that help
  13 make proxy inside package.json for the frontend, type after browserslist: ,"proxy":"http://localhost:5000"
  14 create a useEffect and make a function to fire inside of it called getNames(), make async await for that call
  15 getNames() will have a response of the axios call asynchronously 
-
+t
      useEffect(() => {
         getNames();
       }, [])
