@@ -37,11 +37,11 @@ tutorial: https://www.youtube.com/watch?v=6-RtA6FlbgQ&t=2124s
 
 ...15:20
 
-part 2
+part 2 hosting.
 
 19 push to github
-20 go to digital ocean and create droplet with ssh keys  root@167.71.18.26 
-22 LOG IN with gitBash, [ssh root@167.71.18.26 ] cd into .ssh [maybe cd ~.ssh], type   ssh -i node root@67.205.183.229 enter    ("node"which is the private key")
+20 go to digital ocean and create droplet with ssh keys  instructions are inside when you click create keys. 
+22 LOG IN with gitBash, [ssh root@167.71.18.26 ] LOGOUT= [exit] cd into .ssh [maybe cd ~.ssh], type   ssh -i node root@67.205.183.229 enter    ("node"which is the private key")
 23 install node.js   Docs: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
   4 easy steps.. follow the PPA 
   cd ~
