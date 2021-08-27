@@ -14,10 +14,11 @@ What Is CI/CD? = Continuous integration/continuous delivery. processes that help
  10 type: import axios from 'axios'; at top of src App.js
  11  import React, { useState, useEffect } from 'react';
  12 const [userName, setUsername] = useState('') and  useEffect(() => {     }, []) runs once when page loads
- 13 make proxy inside package.json for the frontend, type after browserslist: ,"proxy":"http://localhost:5000"
+ 13 make proxy inside package.json for the frontend, type after browserslist: ,"proxy":"http://localhost:5000"  
+  *OR add cors to your app.js server npm i cors, then const cors = require('cors), app.use(cors())  no proxy needed in package.json for this
  14 create a useEffect and make a function to fire inside of it called getNames(), make async await for that call
  15 getNames() will have a response of the axios call asynchronously 
-t
+
      useEffect(() => {
         getNames();
       }, [])
@@ -32,6 +33,10 @@ t
    of the server has a "start": "node app.js" , and then npm start. by now you will see in the console.log the response data
  18 go inside App.js of react and in the function getNames make a setUsername(response.data) then in the return put <> <h3>My name is:{userName}</h3> </>
 
+...15:20
+
+19 push to github
+20 
 
 
 
