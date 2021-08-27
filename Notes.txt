@@ -1,6 +1,8 @@
 What Is CI/CD? = Continuous integration/continuous delivery. processes that help software development teams deliver
  code changes more frequently and reliably. CI/CD is part of DevOps, which helps shorten the software development lifecycle.
 
+tutorial: https://www.youtube.com/watch?v=6-RtA6FlbgQ&t=2124s
+
  1 make file app.js
  2 npm init -y
  2 npm i express
@@ -39,14 +41,31 @@ part 2
 
 19 push to github
 20 go to digital ocean and create droplet with ssh keys  root@67.205.183.229 
-22 LOG IN with gitBash, cd into .ssh [maybe cd ~.ssh], type   ssh -i node root@67.205.183.229 enter    ("node"which is the private key")
-23 install node.js    https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
+22 LOG IN with gitBash, [ssh root@your_server_ip] cd into .ssh [maybe cd ~.ssh], type   ssh -i node root@67.205.183.229 enter    ("node"which is the private key")
+23 install node.js   Docs: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
   4 easy steps.. follow the PPA 
   cd ~
   curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh     [edit version]
   sudo bash nodesource_setup.sh             
   sudo apt install nodejs
   node -v
+24 install nginx as a server Docs: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+  sudo apt update
+  sudo apt install nginx
+  sudo ufw allow 'Nginx HTTP'   if skips thats fine...
+  systemctl status nginx    can press q to exit
+25 change root user     Docs step 2 and 3: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
+   adduser joey  pw:joeygunz
+   usermod -aG sudo joey  :[ add sudo privlages.to avoid having to log out of your regular user and log back in as the root account]
+    su - joey   :[to change into that user, not in the docs above..], to go back to root type: exit 
+26 Create a folder that will hold our projects
+    cd /var/www   :[if you ls then it will show a folder called html, thats the welcome to nginx]
+    try to copy the ip address and paste it in the url and see welcome to nginx
+    inside the www is where we will create a folder
+    sudo mkdir mywebsitename
+    cd mywebsitename
+
+
 
 
 
