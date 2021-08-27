@@ -35,8 +35,20 @@ What Is CI/CD? = Continuous integration/continuous delivery. processes that help
 
 ...15:20
 
+part 2
+
 19 push to github
-20 
+20 go to digital ocean and create droplet with ssh keys  root@67.205.183.229 
+22 LOG IN with gitBash, cd into .ssh [maybe cd ~.ssh], type   ssh -i node root@67.205.183.229 enter    ("node"which is the private key")
+23 install node.js    https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
+  4 easy steps.. follow the PPA 
+  cd ~
+  curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh     [edit version]
+  sudo bash nodesource_setup.sh             
+  sudo apt install nodejs
+  node -v
+
+
 
 
 
