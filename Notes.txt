@@ -40,8 +40,8 @@ tutorial: https://www.youtube.com/watch?v=6-RtA6FlbgQ&t=2124s
 part 2
 
 19 push to github
-20 go to digital ocean and create droplet with ssh keys  root@67.205.183.229 
-22 LOG IN with gitBash, [ssh root@your_server_ip] cd into .ssh [maybe cd ~.ssh], type   ssh -i node root@67.205.183.229 enter    ("node"which is the private key")
+20 go to digital ocean and create droplet with ssh keys  root@167.71.18.26 
+22 LOG IN with gitBash, [ssh root@167.71.18.26 ] cd into .ssh [maybe cd ~.ssh], type   ssh -i node root@67.205.183.229 enter    ("node"which is the private key")
 23 install node.js   Docs: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
   4 easy steps.. follow the PPA 
   cd ~
@@ -62,8 +62,10 @@ part 2
     cd /var/www   :[if you ls then it will show a folder called html, thats the welcome to nginx]
     try to copy the ip address and paste it in the url and see welcome to nginx
     inside the www is where we will create a folder
-    sudo mkdir mywebsitename
-    cd mywebsitename
+    sudo mkdir mywebsite
+    cd mywebsite
+    37:00exit
+
 
 
 
